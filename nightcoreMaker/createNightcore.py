@@ -1,3 +1,7 @@
+import os
+import mutagen
+
+
 def createNightcore(inputFilePath, speed, pitchup):
     """Takes the input file path, and creates the adjusted file next to it based on the speed and pitchup values."""
     outputNameList = inputFilePath.split(".")
