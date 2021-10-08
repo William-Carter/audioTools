@@ -1,0 +1,11 @@
+Artist
+"ffmpeg -i \"%s\" -map 0 -c copy -id3v2_version 3 -write_id3v2 1 -metadata \"artist=%s\" \"%s\""
+
+Album
+"ffmpeg -i \"%s\" -map 0 -c copy -id3v2_version 3 -write_id3v2 1 -metadata \"album=%s\" \"%s\""
+
+Title
+"ffmpeg -i \"%s\" -map 0 -c copy -id3v2_version 3 -write_id3v2 1 -metadata \"title=%s\" \"%s\""
+
+Art
+"ffmpeg -i \"%s\" -i \"%s\" -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title=\"Album cover\" -metadata:s:v comment=\"Cover(front)\" \"%s\""
