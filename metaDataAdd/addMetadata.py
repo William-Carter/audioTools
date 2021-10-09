@@ -23,9 +23,3 @@ def addArt(mp3Path, artPath):
     skeleton.addMetadata(
         mp3Path, artPath, "ffmpeg -i \"%s\" -i \"%s\" -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title=\"Album cover\" -metadata:s:v comment=\"Cover(front)\" \"%s\""
     )
-
-
-addArtist("/Users/Will/balls.mp3", "Yuiko")
-addAlbum("/Users/Will/balls.mp3", "Kokoro no Yakusoku")
-addTitle("/Users/Will/balls.mp3", "Kokoro no Yakusoku")
-addArt("/Users/Will/balls.mp3", "/Users/will/Pictures/albumArt/pianoSad.png")
