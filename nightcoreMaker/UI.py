@@ -1,4 +1,3 @@
-# UI based app
 # Effectively mimics the doubletime/nightcore mod from osu!
 # Uses ffmpeg to speed up (or slow down) audio files.
 # Pitch and speed are handled independently.
@@ -8,7 +7,6 @@ from tkinter.constants import HORIZONTAL
 import tkinter.filedialog as fd
 import os
 from createNightcore import createNightcore
-dirPath = os.path.dirname(os.path.realpath(__file__))
 root = tk.Tk()
 root.title("Nightcore Creator")
 root.geometry("600x300")
