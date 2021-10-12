@@ -25,6 +25,8 @@ def addMetadata(mp3Path, metadata, command):
     # ffpmeg can't edit the file it's working on, so we have to create a new file, delete the original and rename the new one
     outputName = getTempName(mp3Path)
 
+    # The actual ffmpeg command
+    # Limited to only 1 metadata input at a time, but I cba to dynamically assemble an ffmpeg command based on what inputs come in
     os.system(
         command % (mp3Path, metadata, outputName)
     )
