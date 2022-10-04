@@ -2,12 +2,11 @@ import os
 
 
 def getTempName(originalName):
-    outputNameList = originalName.split(".")
-    outputNameList[-2] = outputNameList[-2]+"_temp"
-    outputName = ""
-    for item in outputNameList:
-        outputName = outputName + item + "."
-    outputName = outputName[:len(outputName)-1]
+    fileExtension = originalName.split(".")[-1]
+    fileExtension = "." + fileExtension
+
+    tempName = originalName[:-len(fileExtension)]+"_temp"
+    outputName = tempName+fileExtension
     if os.path.isfile(outputName):
         os.remove(outputName)
     return outputName
